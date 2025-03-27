@@ -5,9 +5,15 @@ function FooterSection() {
   const [showNotes, setShowNotes] = useState(false); // Toggle for Notes
   const [showTerms, setShowTerms] = useState(false); // Toggle for Terms & Conditions
 
+  const handlePrint = () => {
+    window.print(); // This triggers the browser's print dialog
+  };
+
   return (
     <div className="bg-white shadow rounded-lg p-6 mt-6 w-full max-w-lg mx-auto sm:max-w-xl">
-      <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4">Notes & Terms</h2>
+      <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4">
+        Notes & Terms
+      </h2>
 
       <div className="space-y-6">
         {/* Notes Section */}
@@ -56,6 +62,24 @@ function FooterSection() {
               placeholder="Add terms and conditions here..."
             ></textarea>
           )}
+        </div>
+      </div>
+
+      <div className="invoice-container bg-white shadow rounded-lg p-6">
+        <h2 className="text-lg font-semibold text-gray-700 mb-4">
+          Invoice Summary
+        </h2>
+
+        {/* Add Your Invoice Content Here */}
+
+        {/* Download & Print Button */}
+        <div className="mt-4">
+          <button
+            onClick={handlePrint}
+            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all"
+          >
+            Download Invoice (Print)
+          </button>
         </div>
       </div>
     </div>
