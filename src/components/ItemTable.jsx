@@ -65,24 +65,39 @@ function ItemTable() {
               <th className="p-3 border-l border-t border-b">ITEM/SERVICE</th>
               <th className="p-3 border-l border-t border-b">HSN/SAC</th>
               <th className="p-3 border-l border-t border-b">DESCRIPTION</th>
-              <th className="p-3 border-l border-t border-b text-center">QTY</th>
-              <th className="p-3 border-l border-t border-b text-right">PRICE</th>
-              <th className="p-3 border-l border-t border-b text-right">DISCOUNT</th>
+              <th className="p-3 border-l border-t border-b text-center">
+                QTY
+              </th>
+              <th className="p-3 border-l border-t border-b text-right">
+                PRICE
+              </th>
+              <th className="p-3 border-l border-t border-b text-right">
+                DISCOUNT
+              </th>
               <th className="p-3 border-l border-t border-b text-right">TAX</th>
-              <th className="p-3 border-l border-t border-b text-right">AMOUNT</th>
-              <th className="p-3 border-l border-t border-b text-center">ACTION</th>
+              <th className="p-3 border-l border-t border-b text-right">
+                AMOUNT
+              </th>
+              <th className="p-3 border-l border-t border-b text-center">
+                ACTION
+              </th>
             </tr>
           </thead>
 
           <tbody>
             {items.map((item, index) => (
-              <tr key={item.id} className="text-sm text-gray-700 hover:bg-gray-50">
+              <tr
+                key={item.id}
+                className="text-sm text-gray-700 hover:bg-gray-50"
+              >
                 <td className="p-3 border text-center">{index + 1}</td>
                 <td className="p-3 border">{item.itemName}</td>
                 <td className="p-3 border text-center">{item.hsnCode}</td>
                 <td className="p-3 border">{item.description}</td>
                 <td className="p-3 border text-center">{item.qty}</td>
-                <td className="p-3 border text-right">₹{item.price.toFixed(2)}</td>
+                <td className="p-3 border text-right">
+                  ₹{item.price.toFixed(2)}
+                </td>
                 <td className="p-3 border text-right">{item.discount}%</td>
                 <td className="p-3 border text-right">{item.tax}%</td>
                 <td className="p-3 border text-right">
@@ -109,15 +124,18 @@ function ItemTable() {
       </div>
 
       {/* Add New Item Button */}
-      <div className="mt-4 flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:justify-between">
+      <div className="text-center mt-4 border-2 border-dashed border-purple-300 p-2 rounded-lg ">
         <button
           onClick={addNewItem}
-          className="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg"
+          className="text-blue-500 px-4 py-2 rounded-lg  transition-all"
         >
           + Add New Item
         </button>
+      </div>
 
-        <button className="bg-blue-100 text-blue-600 px-4 py-2 rounded-lg">
+      {/* Create new Button */}
+      <div className="text-center mt-4 bg-blue-100 p-2">
+        <button className="bg-blue-100 text-blue-500 px-4 py-2  rounded-lg  transition-all">
           Create New Item
         </button>
       </div>
