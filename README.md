@@ -1,6 +1,6 @@
-# Invoice Management System
+# Invoice page
 
-A responsive Invoice Management System built with **React.js**, designed to streamline the creation, editing, and management of invoices. The app features itemized billing, tax and discount calculations, dynamic toggles for invoice status, and customizable notes and terms sections.
+A responsive Invoice page built with **React.js**, designed to streamline the creation, editing, and management of invoices. The app features itemized billing, tax and discount calculations, dynamic toggles for invoice status, and customizable notes and terms sections.
 
 ---
 
