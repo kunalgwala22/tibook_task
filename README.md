@@ -1,12 +1,64 @@
-# React + Vite
+# Invoice Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive Invoice Management System built with **React.js**, designed to streamline the creation, editing, and management of invoices. The app features itemized billing, tax and discount calculations, dynamic toggles for invoice status, and customizable notes and terms sections.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Features**
 
-## Expanding the ESLint configuration
+- **Item Table with Calculations**  
+  - Add, edit, and delete items (products or services) from the invoice.  
+  - Automatically calculates:
+    - Subtotal  
+    - Discounts  
+    - Taxes  
+    - Total amount  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Dynamic Payment Status**  
+  - Toggle between *Paid* and *Unpaid* status using an interactive switch.
+
+- **Notes & Terms Section**  
+  - Expandable sections to add notes and terms & conditions to the invoice.
+
+- **Responsive Design**  
+  - Mobile-first design with smooth scaling on larger screens.
+  - Ensures a seamless experience across devices.
+
+---
+
+## **Tech Stack**
+
+- **React.js**: Core frontend framework used to build the app.
+- **Tailwind CSS**: Utility-first CSS framework for responsive design.
+- **Lucide React Icons**: Icon library for dynamic plus/minus and toggle functionality.
+
+
+---
+
+## **How to Run This Project Locally**
+
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/your-username/invoice-management-system.git
+
+cd tibook_task
+
+npm install
+npm run dev
+
+invoice-management-system/
+│
+├── src/
+│   ├── components/
+│   │   ├── ItemTable.js           # Handles item addition and removal, and amount calculations
+│   │   ├── SummarySection.js      # Displays total, tax, discount, and payment status toggle
+│   │   └── FooterSection.js       # Provides expandable sections for Notes & Terms
+│   │
+│   ├── App.js                     # Main app rendering the invoice components
+│   └── index.js                   # Entry point of the React app
+│
+├── public/
+│   └── index.html                 # Main HTML template
+│
+└── package.json                   # Project configuration and dependencies
+
