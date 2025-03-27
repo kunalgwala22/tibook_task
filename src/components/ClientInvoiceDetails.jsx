@@ -3,9 +3,10 @@ import React from "react";
 function ClientInvoiceDetails() {
   return (
     <div className="p-6 bg-white shadow rounded-lg border">
-      <div className="grid grid-cols-4 gap-4 items-center p-6">
+      {/* Responsive Grid for Main Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-start md:items-center p-6">
         {/* Bill To Section */}
-        <div className="col-span-2">
+        <div className="md:col-span-2">
           <label className="block text-sm font-medium text-gray-700 mb-2">
             Bill To
           </label>
@@ -28,7 +29,7 @@ function ClientInvoiceDetails() {
         </div>
 
         {/* Invoice Details Section */}
-        <div className="col-span-2 grid grid-cols-3 gap-4 ml-auto">
+        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Invoice Prefix:
